@@ -14,7 +14,7 @@ export const Post = ({ data, setSubreddit }) => {
 
   const badImages = ['', 'self', 'nsfw', 'default', 'image'];
   const image = !badImages.includes(data.thumbnail) ? (
-    <img src={data.thumbnail} style={{ width: '100%' }} />
+    <img src={data.thumbnail} style={{ width: '100%' }} alt={data.title}/>
   ) : (
     <></>
   );
